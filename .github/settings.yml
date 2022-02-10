@@ -1,0 +1,8 @@
+---
+#
+# Ansible managed
+#
+repository:
+  description: Install and configure openssh on your system.
+  homepage: https://buluma.github.io/
+  topics: openssh, ansible, molecule, tox, playbook, hacktoberfest
