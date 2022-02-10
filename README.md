@@ -4,7 +4,7 @@ Install and configure openssh on your system.
 
 |GitHub|GitLab|Quality|Downloads|Version|
 |------|------|-------|---------|-------|
-|[![github](https://github.com/buluma/ansible-role-openssh/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-openssh/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-openssh/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-openssh)|[![quality](https://img.shields.io/ansible/quality/54561)](https://galaxy.ansible.com/buluma/openssh)|[![downloads](https://img.shields.io/ansible/role/d/54561)](https://galaxy.ansible.com/buluma/openssh)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-openssh.svg)](https://github.com/buluma/ansible-role-openssh/releases/)|
+|[![github](https://github.com/buluma/ansible-role-openssh/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-openssh/actions)|[![gitlab](https://gitlab.com/buluma/ansible-role-openssh/badges/main/pipeline.svg)](https://gitlab.com/buluma/ansible-role-openssh)|[![quality](https://img.shields.io/ansible/quality/58009)](https://galaxy.ansible.com/buluma/openssh)|[![downloads](https://img.shields.io/ansible/role/d/58009)](https://galaxy.ansible.com/buluma/openssh)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-openssh.svg)](https://github.com/buluma/ansible-role-openssh/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
