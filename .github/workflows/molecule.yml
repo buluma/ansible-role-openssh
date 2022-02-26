@@ -6,15 +6,12 @@
 name: Ansible Molecule
 
 on:
-  push:
-    branches:
-      - '**'
-    tags-ignore:
-      - '*'
-  pull_request:
+  # Schedule updates (once daily)
   schedule:
     - cron: '29 15 * * *'
+  # Lines below let you run workflow manually and on each commit
   workflow_dispatch:
+  push: {branches: ["master", "main", "testing"]}
 
 jobs:
   lint:

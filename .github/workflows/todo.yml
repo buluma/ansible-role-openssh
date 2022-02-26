@@ -14,7 +14,8 @@ jobs:
     steps:
       - uses: "actions/checkout@v2.4.0"
       - name: "TODO to Issue"
-        uses: "alstr/todo-to-issue-action@v4.6"
+        uses: "buluma/todo-to-issue-action@v1.0.1"
         id: "todo"
         with:
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USER_PROJECTS: $buluma/Ansible/To do
+          PROJECTS_SECRET: ${{ secrets.GITHUB_TOKEN }}
