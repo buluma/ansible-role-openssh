@@ -111,7 +111,6 @@ galaxy:
   script:
     - ansible-galaxy role info buluma.openssh
 
-# TODO: Reduce tests
 role_testing_live:
   script:
     - image=${image} tag=${tag} ansible-galaxy install buluma.openssh
