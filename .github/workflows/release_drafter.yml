@@ -47,13 +47,13 @@ jobs:
       - name: Checkout current repo
         uses: actions/checkout@v2
         with:
-          path: master
+          path: main
 
       - name: Commit Changelog file
         run: |
           # We are cloned in the 'main' directory and the dj-wasabi-release
           # repository is the 'dj-wasabi-release' next to 'main'
-          cd master
+          cd main
           # Generate CHANGELOG.md file
           ../dj-wasabi-release/release.sh -d
           # Let commit the changes if there are any? (Well there should be!)

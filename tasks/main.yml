@@ -46,6 +46,12 @@
   notify:
     - restart openssh
 
+- name: systemd | restart and enable openssh
+  ansible.builtin.systemd:
+    name: "{{ openssh_service }}"
+    state: restarted
+  when: "ansible_service_mgr == 'systemd'"
+
 - name: start and enable openssh
   ansible.builtin.service:
     name: "{{ openssh_service }}"
