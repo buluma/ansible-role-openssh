@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-openssh/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/1.0.7...HEAD)
+
+**Merged pull requests:**
+
+- Bump buluma/galaxy-action from 1.0.3 to 6.25.22 [\#5](https://github.com/buluma/ansible-role-openssh/pull/5) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [1.0.7](https://github.com/buluma/ansible-role-openssh/tree/1.0.7) (2022-03-28)
 
 [Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/1.0.6...1.0.7)
