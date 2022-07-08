@@ -9,9 +9,11 @@ on:
   push:
     # branches to consider in the event; optional, defaults to all
     branches:
-      - master
       - main
       - testing
+    paths-ignore:
+      - '**/README.md'
+      - '**/CHANGELOG.md'
   # pull_request event is required only for autolabeler
   pull_request:
     # Only following types are handled by the action, but one can default to all as well
@@ -47,13 +49,13 @@ jobs:
       - name: Checkout current repo
         uses: actions/checkout@v3
         with:
-          path: master
+          path: main
 
       - name: Commit Changelog file
         run: |
           # We are cloned in the 'main' directory and the dj-wasabi-release
           # repository is the 'dj-wasabi-release' next to 'main'
-          cd master
+          cd main
           # Generate CHANGELOG.md file
           ../dj-wasabi-release/release.sh -d
           # Let commit the changes if there are any? (Well there should be!)
