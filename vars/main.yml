@@ -24,7 +24,6 @@ openssh_configuration_file: /etc/ssh/sshd_config
 _openssh_service:
   default: sshd
   Debian-bullseye: ssh
-  # Debian: ssh
   Ubuntu-19: ssh
   Ubuntu-20: ssh
   Kali-kali-rolling: ssh
