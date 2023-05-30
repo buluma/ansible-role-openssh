@@ -23,10 +23,10 @@ openssh_configuration_file: /etc/ssh/sshd_config
 
 _openssh_service:
   default: sshd
-  Debian-bullseye: ssh
+  # Debian-bullseye: ssh
+  Debian: ssh
   Ubuntu-19: ssh
   Ubuntu-20: ssh
-  Kali-2023: ssh
 
 openssh_service: "{{ _openssh_service[ansible_distribution ~ '-' ~ ansible_distribution_release] | default(_openssh_service['default'] ) }}"
 
