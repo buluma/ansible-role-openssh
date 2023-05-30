@@ -26,6 +26,7 @@ _openssh_service:
   Debian-bullseye: ssh
   Ubuntu-19: ssh
   Ubuntu-20: ssh
+  Kali-20: ssh
 
 openssh_service: "{{ _openssh_service[ansible_distribution ~ '-' ~ ansible_distribution_release] | default(_openssh_service['default'] ) }}"
 
