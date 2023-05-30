@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-openssh/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/1.0.8...HEAD)
+
+**Merged pull requests:**
+
+- Kali-roling [\#12](https://github.com/buluma/ansible-role-openssh/pull/12) ([buluma](https://github.com/buluma))
+
 ## [1.0.8](https://github.com/buluma/ansible-role-openssh/tree/1.0.8) (2022-07-08)
 
 [Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/1.0.7...1.0.8)
