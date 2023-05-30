@@ -33,41 +33,39 @@ jobs:
       - name: ansible-lint
         uses: ansible-community/ansible-lint-action@main
   test:
-    # needs:
-    #   - lint
+    needs:
+      - lint
     runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
       matrix:
         config:
-          # - image: "alpine-openrc"
-          #   tag: "latest"
-          # - image: "amazonlinux"
-          #   tag: "latest"
-          # - image: "enterpriselinux"
-          #   tag: "8"
+          - image: "alpine-openrc"
+            tag: "latest"
+          - image: "amazonlinux"
+            tag: "latest"
+          - image: "enterpriselinux"
+            tag: "8"
           - image: "debian-systemd"
             tag: "latest"
           - image: "debian-systemd"
             tag: "buster"
           - image: "debian-systemd"
             tag: "bullseye"
-          - image: "debian-systemd"
-            tag: "bookworm"
-          # - image: "fedora-systemd"
-          #   tag: "36"
-          # - image: "fedora-systemd"
-          #   tag: "37"
-          # - image: "fedora-systemd"
-          #   tag: "latest"
-          # - image: "docker-opensuse-systemd"
-          #   tag: "latest"
-          # - image: "docker-ubuntu-systemd"
-          #   tag: "latest"
-          # - image: "docker-ubuntu-systemd"
-          #   tag: "focal"
-          # - image: "docker-ubuntu-systemd"
-          #   tag: "bionic"
+          - image: "fedora-systemd"
+            tag: "36"
+          - image: "fedora-systemd"
+            tag: "37"
+          - image: "fedora-systemd"
+            tag: "latest"
+          - image: "docker-opensuse-systemd"
+            tag: "latest"
+          - image: "docker-ubuntu-systemd"
+            tag: "latest"
+          - image: "docker-ubuntu-systemd"
+            tag: "focal"
+          - image: "docker-ubuntu-systemd"
+            tag: "bionic"
           - image: "kali"
             tag: "latest"
     steps:
