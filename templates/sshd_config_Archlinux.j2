@@ -86,4 +86,20 @@ AllowUsers {{ openssh_allow_users }}
 AllowGroups {{ openssh_allow_groups }}
 {% endif %}
 
+{% if openssh_kexalgorithms is defined %}
+KexAlgorithms {{ openssh_kexalgorithms | join(',') }}
+{% endif %}
+
+{% if openssh_hostkey_algorithms is defined %}
+HostkeyAlgorithms {{ openssh_hostkey_algorithms | join(',') }}
+{% endif %}
+
+{% if openssh_ciphers is defined %}
+Ciphers {{ openssh_ciphers | join(',') }}
+{% endif %}
+
+{% if openssh_macs is defined %}
+MACs {{ openssh_macs | join(',') }}
+{% endif %}
+
 TrustedUserCAKeys {{ openssh_trusted_user_ca_keys }}
