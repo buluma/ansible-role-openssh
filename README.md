@@ -1,10 +1,10 @@
-# [openssh](#openssh)
+# [Ansible role openssh](#openssh)
 
 Install and configure openssh on your system.
 
-|GitHub|GitLab|Quality|Downloads|Version|Issues|Pull Requests|
-|------|------|-------|---------|-------|------|-------------|
-|[![github](https://github.com/buluma/ansible-role-openssh/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-openssh/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-openssh/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-openssh)|[![quality](https://img.shields.io/ansible/quality/58009)](https://galaxy.ansible.com/buluma/openssh)|[![downloads](https://img.shields.io/ansible/role/d/58009)](https://galaxy.ansible.com/buluma/openssh)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-openssh.svg)](https://github.com/buluma/ansible-role-openssh/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-openssh.svg)](https://github.com/buluma/ansible-role-openssh/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-openssh.svg)](https://github.com/buluma/ansible-role-openssh/pulls/)|
+|GitHub|GitLab|Downloads|Version|Issues|Pull Requests|
+|------|------|-------|-------|------|-------------|
+|[![github](https://github.com/buluma/ansible-role-openssh/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-openssh/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-openssh/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-openssh)|[![downloads](https://img.shields.io/ansible/role/d/4787)](https://galaxy.ansible.com/buluma/openssh)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-openssh.svg)](https://github.com/buluma/ansible-role-openssh/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-openssh.svg)](https://github.com/buluma/ansible-role-openssh/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-openssh.svg)](https://github.com/buluma/ansible-role-openssh/pulls/)|
 
 ## [Example Playbook](#example-playbook)
 
