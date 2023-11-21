@@ -4,6 +4,11 @@
 
 [Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/1.0.8...HEAD)
 
+**Closed issues:**
+
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#11](https://github.com/buluma/ansible-role-openssh/issues/11)
+- Update action [\#10](https://github.com/buluma/ansible-role-openssh/issues/10)
+
 **Merged pull requests:**
 
 - Kali-roling [\#12](https://github.com/buluma/ansible-role-openssh/pull/12) ([buluma](https://github.com/buluma))
