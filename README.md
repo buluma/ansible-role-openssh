@@ -19,8 +19,10 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 
   roles:
     - role: buluma.openssh
-      openssh_allow_users: root
-      openssh_allow_groups: root
+      openssh_allow_users:
+        - root
+      openssh_allow_groups:
+        - root
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/buluma/ansible-role-openssh/blob/master/molecule/default/prepare.yml):
@@ -150,10 +152,11 @@ openssh_trusted_user_ca_keys: none
 
 # Restrict access to this (space separated list) of users or groups.
 # For example: "openssh_allow_users: root my_user"
-# openssh_allow_users: root
+# openssh_allow_users:
+#  - root
 
-# For example: "openssh_allow_groups: wheel my_group"
-# openssh_allow_groups: wheel
+# openssh_allow_groups:
+#  - wheel
 ```
 
 ## [Requirements](#requirements)
@@ -185,12 +188,11 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |---------|----|
 |[Alpine](https://hub.docker.com/repository/docker/buluma/alpine/general)|all|
 |[Amazon](https://hub.docker.com/repository/docker/buluma/amazonlinux/general)|Candidate|
-|[EL](https://hub.docker.com/repository/docker/buluma/enterpriselinux/general)|8|
+|[EL](https://hub.docker.com/repository/docker/buluma/enterpriselinux/general)|8, 9|
 |[Debian](https://hub.docker.com/repository/docker/buluma/debian/general)|all|
 |[Fedora](https://hub.docker.com/repository/docker/buluma/fedora/general)|all|
 |[opensuse](https://hub.docker.com/repository/docker/buluma/opensuse/general)|all|
 |[Ubuntu](https://hub.docker.com/repository/docker/buluma/ubuntu/general)|all|
-|[Kali](https://hub.docker.com/repository/docker/buluma/kali/general)|all|
 
 The minimum version of Ansible required is 2.12, tests have been done to:
 
