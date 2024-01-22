@@ -11,14 +11,23 @@ on:
       - master
       - main
       - testing
+      - dependabot/**
+      - renovate/**
     paths-ignore:
       - '**/README.md'
       - '**/CHANGELOG.md'
     tags_ignore:
       - '*'
   pull_request:
+  pull_request_target:
   schedule:
-    - cron: '29 15 15 * *'
+    # - cron: '29 15 15 * *'
+    - cron: '29 15 * * *'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions: write-all
 
 concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
@@ -29,12 +38,10 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: ansible-lint
         uses: ansible-community/ansible-lint-action@main
   test:
-    needs:
-      - lint
     runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
@@ -46,18 +53,18 @@ jobs:
             tag: "latest"
           - image: "enterpriselinux"
             tag: "8"
-          - image: "debian-systemd"
+          - image: "enterpriselinux"
             tag: "latest"
           - image: "debian-systemd"
-            tag: "buster"
+            tag: "latest"
           - image: "debian-systemd"
             tag: "bullseye"
           - image: "fedora-systemd"
-            tag: "36"
-          - image: "fedora-systemd"
-            tag: "37"
+            tag: "38"
           - image: "fedora-systemd"
             tag: "latest"
+          - image: "fedora-systemd"
+            tag: "rawhide"
           - image: "docker-opensuse-systemd"
             tag: "latest"
           - image: "docker-ubuntu-systemd"
@@ -66,19 +73,37 @@ jobs:
             tag: "focal"
           - image: "docker-ubuntu-systemd"
             tag: "bionic"
-          - image: "kali"
-            tag: "latest"
     steps:
-      - name: checkout
-        uses: actions/checkout@v3
+      - name: Checkout Role
+        uses: actions/checkout@v4
         with:
           path: "${{ github.repository }}"
-      - name: disable apparmor for mysql
-        run: sudo ln -s /etc/apparmor.d/usr.sbin.mysqld /etc/apparmor.d/disable/
-      - name: parse apparmor for mysql
-        run: sudo apparmor_parser -R /etc/apparmor.d/usr.sbin.mysqld
-      - name: molecule
-        uses: buluma/molecule-action@v5.0.7
+      - name: Running Molecule Test
+        uses: buluma/molecule-action@v6.0.3
         with:
           image: ${{ matrix.config.image }}
           tag: ${{ matrix.config.tag }}
+
+  dependabot:
+    needs:
+      - lint
+      - test
+    runs-on: ubuntu-latest
+    if: ${{ github.actor == 'dependabot[bot]' || github.actor == 'buluma' && github.event_name == 'pull_request'}}
+    steps:
+      - uses: "actions/checkout@master"
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Approve a PR
+        run: gh pr review --approve "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: "Merge Dependabot PR"
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
