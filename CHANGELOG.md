@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-openssh/tree/HEAD)
+## [2.1.0](https://github.com/buluma/ansible-role-openssh/tree/2.1.0) (2024-01-22)
 
-[Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/2.0.0...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/2.0.0...2.1.0)
 
 **Closed issues:**
 
