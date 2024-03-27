@@ -68,7 +68,7 @@
     that:
       - openssh_permit_root_login is defined
       - openssh_permit_root_login is string
-      - openssh_permit_root_login in [ "true", "false", "without-password", "prohibit-password", "forced-commands-only" ]
+      - openssh_permit_root_login in [ "yes", "no", "without-password", "prohibit-password", "forced-commands-only" ]
     quiet: true
 
 - name: assert | Test openssh_strict_modes
@@ -76,7 +76,7 @@
     that:
       - openssh_strict_modes is defined
       - openssh_strict_modes is string
-      - openssh_strict_modes in [ "true", "false" ]
+      - openssh_strict_modes in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_max_auth_tries
@@ -100,7 +100,7 @@
     that:
       - openssh_pub_key_authentication is defined
       - openssh_pub_key_authentication is string
-      - openssh_pub_key_authentication in [ "true", "false" ]
+      - openssh_pub_key_authentication in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_authorized_key_file
@@ -140,7 +140,7 @@
     that:
       - openssh_host_based_authentication is defined
       - openssh_host_based_authentication is string
-      - openssh_host_based_authentication in [ "true", "false" ]
+      - openssh_host_based_authentication in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_ignore_user_known_hosts
@@ -148,7 +148,7 @@
     that:
       - openssh_ignore_user_known_hosts is defined
       - openssh_ignore_user_known_hosts is string
-      - openssh_ignore_user_known_hosts in [ "true", "false" ]
+      - openssh_ignore_user_known_hosts in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_ignore_rhosts
@@ -156,7 +156,7 @@
     that:
       - openssh_ignore_rhosts is defined
       - openssh_ignore_rhosts is string
-      - openssh_ignore_rhosts in [ "true", "false" ]
+      - openssh_ignore_rhosts in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_permit_empty_passwords
@@ -164,7 +164,7 @@
     that:
       - openssh_permit_empty_passwords is defined
       - openssh_permit_empty_passwords is string
-      - openssh_permit_empty_passwords in [ "true", "false" ]
+      - openssh_permit_empty_passwords in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_password_authentication
@@ -172,7 +172,7 @@
     that:
       - openssh_password_authentication is defined
       - openssh_password_authentication is string
-      - openssh_password_authentication in [ "true", "false" ]
+      - openssh_password_authentication in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_challenge_response_authentication
@@ -180,7 +180,7 @@
     that:
       - openssh_challenge_response_authentication is defined
       - openssh_challenge_response_authentication is string
-      - openssh_challenge_response_authentication in [ "true", "false" ]
+      - openssh_challenge_response_authentication in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_gssapi_authentication
@@ -188,7 +188,7 @@
     that:
       - openssh_gssapi_authentication is defined
       - openssh_gssapi_authentication is string
-      - openssh_gssapi_authentication in [ "true", "false" ]
+      - openssh_gssapi_authentication in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_gssapi_cleanup_credentials
@@ -196,7 +196,7 @@
     that:
       - openssh_gssapi_cleanup_credentials is defined
       - openssh_gssapi_cleanup_credentials is string
-      - openssh_gssapi_cleanup_credentials in [ "true", "false" ]
+      - openssh_gssapi_cleanup_credentials in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_gssapi_strict_acceptor_check
@@ -204,7 +204,7 @@
     that:
       - openssh_gssapi_strict_acceptor_check is defined
       - openssh_gssapi_strict_acceptor_check is string
-      - openssh_gssapi_strict_acceptor_check in [ "true", "false" ]
+      - openssh_gssapi_strict_acceptor_check in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_gssapi_key_exchange
@@ -212,7 +212,7 @@
     that:
       - openssh_gssapi_key_exchange is defined
       - openssh_gssapi_key_exchange is string
-      - openssh_gssapi_key_exchange in [ "true", "false" ]
+      - openssh_gssapi_key_exchange in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_gssaip_enable_k5_users
@@ -220,7 +220,7 @@
     that:
       - openssh_gssaip_enable_k5_users is defined
       - openssh_gssaip_enable_k5_users is string
-      - openssh_gssaip_enable_k5_users in [ "true", "false" ]
+      - openssh_gssaip_enable_k5_users in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_use_pam
@@ -228,7 +228,7 @@
     that:
       - openssh_use_pam is defined
       - openssh_use_pam is string
-      - openssh_use_pam in [ "true", "false" ]
+      - openssh_use_pam in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_allow_agent_forwarding
@@ -236,7 +236,7 @@
     that:
       - openssh_allow_agent_forwarding is defined
       - openssh_allow_agent_forwarding is string
-      - openssh_allow_agent_forwarding in [ "true", "false" ]
+      - openssh_allow_agent_forwarding in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_allow_tcp_forwarding
@@ -244,7 +244,7 @@
     that:
       - openssh_allow_tcp_forwarding is defined
       - openssh_allow_tcp_forwarding is string
-      - openssh_allow_tcp_forwarding in [ "true", "false" ]
+      - openssh_allow_tcp_forwarding in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_gateway_ports
@@ -252,7 +252,7 @@
     that:
       - openssh_gateway_ports is defined
       - openssh_gateway_ports is string
-      - openssh_gateway_ports in [ "true", "false" ]
+      - openssh_gateway_ports in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_x11_forwarding
@@ -260,7 +260,7 @@
     that:
       - openssh_x11_forwarding is defined
       - openssh_x11_forwarding is string
-      - openssh_x11_forwarding in [ "true", "false" ]
+      - openssh_x11_forwarding in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_x11_display_offset
@@ -276,7 +276,7 @@
     that:
       - openssh_x11_use_localhost is defined
       - openssh_x11_use_localhost is string
-      - openssh_x11_use_localhost in [ "true", "false" ]
+      - openssh_x11_use_localhost in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_permit_tty
@@ -284,7 +284,7 @@
     that:
       - openssh_permit_tty is defined
       - openssh_permit_tty is string
-      - openssh_permit_tty in [ "true", "false" ]
+      - openssh_permit_tty in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_print_motd
@@ -292,7 +292,7 @@
     that:
       - openssh_print_motd is defined
       - openssh_print_motd is string
-      - openssh_print_motd in [ "true", "false" ]
+      - openssh_print_motd in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_print_last_log
@@ -300,7 +300,7 @@
     that:
       - openssh_print_last_log is defined
       - openssh_print_last_log is string
-      - openssh_print_last_log in [ "true", "false" ]
+      - openssh_print_last_log in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_tcp_keep_alive
@@ -308,7 +308,7 @@
     that:
       - openssh_tcp_keep_alive is defined
       - openssh_tcp_keep_alive is string
-      - openssh_tcp_keep_alive in [ "true", "false" ]
+      - openssh_tcp_keep_alive in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_permit_user_environment
@@ -316,7 +316,7 @@
     that:
       - openssh_permit_user_environment is defined
       - openssh_permit_user_environment is string
-      - openssh_permit_user_environment in [ "true", "false" ]
+      - openssh_permit_user_environment in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_compression
@@ -324,7 +324,7 @@
     that:
       - openssh_compression is defined
       - openssh_compression is string
-      - openssh_compression in [ "true", "false", "delayed" ]
+      - openssh_compression in [ "yes", "no", "delayed" ]
     quiet: true
 
 - name: assert | Test openssh_client_alive_interval
@@ -348,7 +348,7 @@
     that:
       - openssh_show_patch_level is defined
       - openssh_show_patch_level is string
-      - openssh_show_patch_level in [ "true", "false" ]
+      - openssh_show_patch_level in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_use_dns
@@ -356,7 +356,7 @@
     that:
       - openssh_use_dns is defined
       - openssh_use_dns is string
-      - openssh_use_dns in [ "true", "false" ]
+      - openssh_use_dns in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_pid_file
@@ -380,7 +380,7 @@
     that:
       - openssh_permit_tunnel is defined
       - openssh_permit_tunnel is string
-      - openssh_permit_tunnel in [ "true", "false" ]
+      - openssh_permit_tunnel in [ "yes", "no" ]
     quiet: true
 
 - name: assert | Test openssh_chroot_directory
