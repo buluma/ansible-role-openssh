@@ -29,7 +29,9 @@ galaxy_info:
         - all
     - name: Ubuntu
       versions:
-        - all
+        - focal
+        - jammy
+        - bionic
 
   galaxy_tags:
     - openssh
