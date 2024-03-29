@@ -46,8 +46,8 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - image: "alpine"
-            tag: "all"
+          - image: "alpine-openrc"
+            tag: "latest"
           - image: "amazonlinux"
             tag: "latest"
           - image: "enterpriselinux"
