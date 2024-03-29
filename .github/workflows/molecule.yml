@@ -46,10 +46,10 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - image: "docker-molecule-images"
-            tag: "alpine-openrc"
-          - image: "docker-molecule-images"
-            tag: "amazonlinux2023"
+          - image: "alpine"
+            tag: "all"
+          - image: "amazonlinux"
+            tag: "latest"
           - image: "enterpriselinux"
             tag: "8"
           - image: "enterpriselinux"
