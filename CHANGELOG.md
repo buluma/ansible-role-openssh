@@ -1,5 +1,9 @@
 # Changelog
 
+## [24.3.31](https://github.com/buluma/ansible-role-openssh/tree/24.3.31) (2024-03-29)
+
+[Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/2.1.0...24.3.31)
+
 ## [2.1.0](https://github.com/buluma/ansible-role-openssh/tree/2.1.0) (2024-01-22)
 
 [Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/2.0.0...2.1.0)
@@ -10,20 +14,20 @@
 
 ## [2.0.0](https://github.com/buluma/ansible-role-openssh/tree/2.0.0) (2023-12-25)
 
-[Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/1.0.10...2.0.0)
+[Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/1.0.11...2.0.0)
 
 **Closed issues:**
 
 - Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#16](https://github.com/buluma/ansible-role-openssh/issues/16)
 - Update action [\#15](https://github.com/buluma/ansible-role-openssh/issues/15)
 
-## [1.0.10](https://github.com/buluma/ansible-role-openssh/tree/1.0.10) (2023-11-21)
-
-[Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/1.0.11...1.0.10)
-
 ## [1.0.11](https://github.com/buluma/ansible-role-openssh/tree/1.0.11) (2023-11-21)
 
-[Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/1.0.9...1.0.11)
+[Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/1.0.10...1.0.11)
+
+## [1.0.10](https://github.com/buluma/ansible-role-openssh/tree/1.0.10) (2023-11-21)
+
+[Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/1.0.9...1.0.10)
 
 ## [1.0.9](https://github.com/buluma/ansible-role-openssh/tree/1.0.9) (2023-11-21)
 
