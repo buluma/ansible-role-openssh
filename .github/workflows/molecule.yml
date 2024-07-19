@@ -12,7 +12,6 @@ on:
       - main
       - testing
       - dependabot/**
-      # - renovate/**
     paths-ignore:
       - '**/README.md'
       - '**/CHANGELOG.md'
@@ -21,8 +20,7 @@ on:
   pull_request:
   pull_request_target:
   schedule:
-    # - cron: '29 15 15 * *'
-    - cron: '29 15 * * *'
+    - cron: '29 15 15/15 * *'
 
   workflow_dispatch:
 
@@ -36,10 +34,10 @@ jobs:
   lint:
     runs-on: ubuntu-20.04
     steps:
-      - name: checkout
+      - name: Checkout Role
         uses: actions/checkout@v4
-      - name: ansible-lint
-        uses: ansible-community/ansible-lint-action@main
+      - name: Run Ansible-lint
+        uses: ansible/ansible-lint@v24.7.0
   test:
     needs:
       - lint
@@ -61,11 +59,11 @@ jobs:
           - image: "docker-molecule-images"
             tag: "bullseye"
           - image: "docker-molecule-images"
+            tag: "38"
+          - image: "docker-molecule-images"
             tag: "39"
           - image: "docker-molecule-images"
             tag: "40"
-          - image: "docker-molecule-images"
-            tag: "rawhide"
           - image: "docker-molecule-images"
             tag: "opensuse"
           - image: "docker-molecule-images"
@@ -84,8 +82,6 @@ jobs:
         with:
           image: ${{ matrix.config.image }}
           tag: ${{ matrix.config.tag }}
-      - name: Running Role Test
-        run: ansible-galaxy role import --api-key ${{ secrets.galaxy_api_key }} buluma ${{ github.event.repository.name }}
 
   dependabot:
     needs:
