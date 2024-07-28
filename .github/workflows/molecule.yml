@@ -12,7 +12,6 @@ on:
       - main
       - testing
       - dependabot/**
-      - renovate/**
     paths-ignore:
       - '**/README.md'
       - '**/CHANGELOG.md'
@@ -21,10 +20,8 @@ on:
   pull_request:
   pull_request_target:
   schedule:
-    # - cron: '29 15 15 * *'
-    - cron: '29 15 * * *'
+    - cron: '29 15 15/15 * *'
 
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 permissions: write-all
@@ -37,49 +34,58 @@ jobs:
   lint:
     runs-on: ubuntu-20.04
     steps:
-      - name: checkout
+      - name: Checkout Role
         uses: actions/checkout@v4
-      - name: ansible-lint
-        uses: ansible-community/ansible-lint-action@main
+      - name: Run Ansible-lint
+        uses: ansible/ansible-lint@v24.7.0
   test:
-    runs-on: ubuntu-20.04
+    needs:
+      - lint
+    runs-on: ubuntu-22.04
     strategy:
       fail-fast: false
       matrix:
         config:
-          - image: "alpine-openrc"
-            tag: "latest"
-          - image: "amazonlinux"
-            tag: "latest"
+          - image: "docker-molecule-images"
+            tag: "alpine-openrc"
+          - image: "docker-molecule-images"
+            tag: "amazonlinux2023"
           - image: "enterpriselinux"
             tag: "8"
           - image: "enterpriselinux"
             tag: "latest"
-          - image: "debian-systemd"
-            tag: "latest"
-          - image: "debian-systemd"
+          - image: "docker-molecule-images"
+            tag: "buster"
+          - image: "docker-molecule-images"
             tag: "bullseye"
-          - image: "fedora-systemd"
+          - image: "docker-molecule-images"
             tag: "38"
-          - image: "fedora-systemd"
-            tag: "latest"
-          - image: "fedora-systemd"
-            tag: "rawhide"
-          - image: "docker-opensuse-systemd"
-            tag: "latest"
-          - image: "docker-ubuntu-systemd"
-            tag: "latest"
-          - image: "docker-ubuntu-systemd"
+          - image: "docker-molecule-images"
+            tag: "39"
+          - image: "docker-molecule-images"
+            tag: "40"
+          - image: "docker-molecule-images"
+            tag: "opensuse"
+          - image: "docker-molecule-images"
             tag: "focal"
-          - image: "docker-ubuntu-systemd"
+          - image: "docker-molecule-images"
+            tag: "jammy"
+          - image: "docker-molecule-images"
             tag: "bionic"
     steps:
+
+      - name: Docker Login
+        uses: docker/login-action@v3.2.0
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
       - name: Checkout Role
         uses: actions/checkout@v4
         with:
           path: "${{ github.repository }}"
       - name: Running Molecule Test
-        uses: buluma/molecule-action@v6.0.3
+        uses: buluma/molecule-action@v24.6.17
         with:
           image: ${{ matrix.config.image }}
           tag: ${{ matrix.config.tag }}
@@ -88,13 +94,13 @@ jobs:
     needs:
       - lint
       - test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     if: ${{ github.actor == 'dependabot[bot]' || github.actor == 'buluma' && github.event_name == 'pull_request'}}
     steps:
       - uses: "actions/checkout@master"
       - name: Dependabot metadata
         id: metadata
-        uses: dependabot/fetch-metadata@v1
+        uses: dependabot/fetch-metadata@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Approve a PR
