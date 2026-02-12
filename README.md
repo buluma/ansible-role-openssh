@@ -1,10 +1,10 @@
-# Ansible role [openssh](https://galaxy.ansible.com/ui/standalone/roles/buluma/openssh/documentation)
+# [Ansible role openssh](#ansible-role-openssh)
 
 Install and configure openssh on your system.
 
-|GitHub|Version|Issues|Pull Requests|Downloads|
-|------|-------|------|-------------|---------|
-|[![github](https://github.com/buluma/ansible-role-openssh/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-openssh/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-openssh.svg)](https://github.com/buluma/ansible-role-openssh/releases/)|[![Issues](https://img.shields.io/github/issues/buluma/ansible-role-openssh.svg)](https://github.com/buluma/ansible-role-openssh/issues/)|[![PullRequests](https://img.shields.io/github/issues-pr-closed-raw/buluma/ansible-role-openssh.svg)](https://github.com/buluma/ansible-role-openssh/pulls/)|[![Ansible Role](https://img.shields.io/ansible/role/d/buluma/openssh)](https://galaxy.ansible.com/ui/standalone/roles/buluma/openssh/documentation)|
+|GitHub|GitLab|Downloads|Version|
+|------|------|---------|-------|
+|[![github](https://github.com/buluma/ansible-role-openssh/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-openssh/actions)|[![gitlab](https://gitlab.com/shadowwalker/ansible-role-openssh/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-openssh)|[![downloads](https://img.shields.io/ansible/role/d/buluma/openssh)](https://galaxy.ansible.com/buluma/openssh)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-openssh.svg)](https://github.com/buluma/ansible-role-openssh/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -224,17 +224,16 @@ openssh_trusted_user_ca_keys: none
 
 The following roles are used to prepare a system. You can prepare your system in another way.
 
-| Requirement | GitHub | Version |
+| Requirement | GitHub | GitLab |
 |-------------|--------|--------|
-|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Ansible Molecule](https://github.com/buluma/ansible-role-bootstrap/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-bootstrap.svg)](https://github.com/shadowwalker/ansible-role-bootstrap)|
-|[buluma.selinux](https://galaxy.ansible.com/buluma/selinux)|[![Ansible Molecule](https://github.com/buluma/ansible-role-selinux/actions/workflows/molecule.yml/badge.svg)](https://github.com/buluma/ansible-role-selinux/actions/workflows/molecule.yml)|[![Version](https://img.shields.io/github/release/buluma/ansible-role-selinux.svg)](https://github.com/shadowwalker/ansible-role-selinux)|
+|[buluma.bootstrap](https://galaxy.ansible.com/buluma/bootstrap)|[![Build Status GitHub](https://github.com/buluma/ansible-role-bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-bootstrap/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-bootstrap/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-bootstrap)|
+|[buluma.selinux](https://galaxy.ansible.com/buluma/selinux)|[![Build Status GitHub](https://github.com/buluma/ansible-role-selinux/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-selinux/actions)|[![Build Status GitLab](https://gitlab.com/shadowwalker/ansible-role-selinux/badges/master/pipeline.svg)](https://gitlab.com/shadowwalker/ansible-role-selinux)|
 
 ## [Context](#context)
 
-This role is a part of many compatible roles. Have a look at [the documentation of these roles](https://buluma.github.io/) for further information.
+This role is part of many compatible roles. Have a look at [the documentation of these roles](https://buluma.github.io/) for further information.
 
 Here is an overview of related roles:
-
 ![dependencies](https://raw.githubusercontent.com/buluma/ansible-role-openssh/png/requirements.png "Dependencies")
 
 ## [Compatibility](#compatibility)
@@ -244,29 +243,26 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 |container|tags|
 |---------|----|
 |[Alpine](https://hub.docker.com/r/buluma/alpine)|all|
-|[Amazon](https://hub.docker.com/r/buluma/amazonlinux)|Candidate|
-|[EL](https://hub.docker.com/r/buluma/enterpriselinux)|8, 9|
+|[Amazon](https://hub.docker.com/r/buluma/amazonlinux)|all|
+|[EL](https://hub.docker.com/r/buluma/enterpriselinux)|all|
 |[Debian](https://hub.docker.com/r/buluma/debian)|all|
 |[Fedora](https://hub.docker.com/r/buluma/fedora)|all|
 |[opensuse](https://hub.docker.com/r/buluma/opensuse)|all|
-|[Ubuntu](https://hub.docker.com/r/buluma/ubuntu)|focal, jammy, bionic|
+|[Ubuntu](https://hub.docker.com/r/buluma/ubuntu)|all|
 
-The minimum version of Ansible required is 2.12, tests have been done to:
+The minimum version of Ansible required is 2.12, tests have been done on:
 
 - The previous version.
 - The current version.
 - The development version.
 
-If you find issues, please register them in [GitHub](https://github.com/buluma/ansible-role-openssh/issues)
-
-## [Changelog](#changelog)
-
-[Role History](https://github.com/buluma/ansible-role-openssh/blob/master/CHANGELOG.md)
+If you find issues, please register them on [GitHub](https://github.com/buluma/ansible-role-openssh/issues).
 
 ## [License](#license)
 
-[Apache-2.0](https://github.com/buluma/ansible-role-openssh/blob/master/LICENSE)
+[Apache-2.0](https://github.com/buluma/ansible-role-openssh/blob/master/LICENSE).
 
 ## [Author Information](#author-information)
 
-[Shadow Walker](https://buluma.github.io/)
+[buluma](https://buluma.github.io/)
+
