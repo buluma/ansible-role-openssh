@@ -34,7 +34,8 @@ _openssh_template_src:
   RedHat: sshd_config_RedHat.j2
   Suse: sshd_config_Suse.j2
 
-openssh_template_src: "{{ _openssh_template_src[ansible_os_family ~ '-' ~ ansible_distribution_major_version] | default(_openssh_template_src[ansible_distribution] | default(_openssh_template_src[ansible_os_family] )) }}"
+openssh_template_src: "{{ _openssh_template_src[ansible_os_family ~ '-' ~ ansible_distribution_major_version] | default(_openssh_template_src[ansible_distribution]
+  | default(_openssh_template_src[ansible_os_family] )) }}"
 
 _openssh_template_mode:
   default: "644"

@@ -1,5 +1,4 @@
 ---
-
 - name: assert | Test ssh_port
   ansible.builtin.assert:
     that:
