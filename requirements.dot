@@ -1,0 +1,11 @@
+digraph PhiloDilemma {
+  label = "Michael Buluma" ;
+  overlap=false
+  {
+    "openssh" [fillcolor=yellow style=filled penwidth=3]
+    "buluma.bootstrap" [fillcolor=green style=filled]
+    "buluma.selinux" [fillcolor=green style=filled]
+  }
+  "openssh" -> "buluma.bootstrap"
+  "openssh" -> "buluma.selinux"
+}
