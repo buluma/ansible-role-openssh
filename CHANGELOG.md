@@ -1,5 +1,63 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-openssh/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/24.7.28...HEAD)
+
+**Closed issues:**
+
+- Update action [\#18](https://github.com/buluma/ansible-role-openssh/issues/18)
+
+## [24.7.28](https://github.com/buluma/ansible-role-openssh/tree/24.7.28) (2024-07-28)
+
+[Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/24.3.31...24.7.28)
+
+**Merged pull requests:**
+
+- Added cryptographic algorithms params [\#13](https://github.com/buluma/ansible-role-openssh/pull/13) ([telepuz](https://github.com/telepuz))
+
+## [24.3.31](https://github.com/buluma/ansible-role-openssh/tree/24.3.31) (2024-03-29)
+
+[Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/2.1.0...24.3.31)
+
+## [2.1.0](https://github.com/buluma/ansible-role-openssh/tree/2.1.0) (2024-01-22)
+
+[Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/2.0.0...2.1.0)
+
+**Closed issues:**
+
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#19](https://github.com/buluma/ansible-role-openssh/issues/19)
+
+## [2.0.0](https://github.com/buluma/ansible-role-openssh/tree/2.0.0) (2023-12-25)
+
+[Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/1.0.11...2.0.0)
+
+**Closed issues:**
+
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#16](https://github.com/buluma/ansible-role-openssh/issues/16)
+- Update action [\#15](https://github.com/buluma/ansible-role-openssh/issues/15)
+
+## [1.0.11](https://github.com/buluma/ansible-role-openssh/tree/1.0.11) (2023-11-21)
+
+[Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/1.0.9...1.0.11)
+
+## [1.0.9](https://github.com/buluma/ansible-role-openssh/tree/1.0.9) (2023-11-21)
+
+[Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/1.0.10...1.0.9)
+
+## [1.0.10](https://github.com/buluma/ansible-role-openssh/tree/1.0.10) (2023-11-21)
+
+[Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/1.0.8...1.0.10)
+
+**Closed issues:**
+
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#11](https://github.com/buluma/ansible-role-openssh/issues/11)
+- Update action [\#10](https://github.com/buluma/ansible-role-openssh/issues/10)
+
+**Merged pull requests:**
+
+- Kali-roling [\#12](https://github.com/buluma/ansible-role-openssh/pull/12) ([buluma](https://github.com/buluma))
+
 ## [1.0.8](https://github.com/buluma/ansible-role-openssh/tree/1.0.8) (2022-07-08)
 
 [Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/1.0.7...1.0.8)

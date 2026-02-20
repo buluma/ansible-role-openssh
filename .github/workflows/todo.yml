@@ -7,6 +7,16 @@ name: "TODO 2 Issue"
 
 on:
   push:
+    branches:
+      - master
+      - main
+    paths-ignore:
+      - '**/README.md'
+      - '**/CHANGELOG.md'
+    tags_ignore:
+      - '*'
+
+permissions: write-all
 
 concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
@@ -14,12 +24,11 @@ concurrency:
 
 jobs:
   build:
-    runs-on: "ubuntu-20.04"
+    runs-on: "ubuntu-latest"
     steps:
-      - uses: "actions/checkout@v3"
+      - uses: "actions/checkout@v6"
       - name: "TODO to Issue"
-        uses: "buluma/todo-to-issue-action@v1.0.1"
+        uses: "buluma/todo-to-issue-action@v2.0.2"
         id: "todo"
         with:
-          USER_PROJECTS: buluma/Ansible/To do
-          PROJECTS_SECRET: ${{ secrets.PROJECTS_SECRET }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}

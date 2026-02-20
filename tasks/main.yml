@@ -2,8 +2,9 @@
 # tasks file for openssh
 
 - name: Import assert.yml
-  ansible.builtin.import_tasks: assert.yml
-  run_once: yes
+  ansible.builtin.import_tasks:
+    file: assert.yml
+  run_once: true
   delegate_to: localhost
 
 - name: Install openssh
@@ -50,9 +51,7 @@
   ansible.builtin.service:
     name: "{{ openssh_service }}"
     state: started
-    enabled: yes
+    enabled: true
 
 - name: Flush handlers
   ansible.builtin.meta: flush_handlers
-  when:
-    - openssh_restart_immediately
