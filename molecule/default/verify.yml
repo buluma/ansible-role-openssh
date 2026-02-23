@@ -1,27 +1,27 @@
 ---
-- name: Verify
-  hosts: all
-  become: true
-  gather_facts: false
+  - name: Verify
+    hosts: all
+    become: true
+    gather_facts: false
 
-  tasks:
-    - name: Check if connection still works
-      ansible.builtin.ping:
+    tasks:
+      - name: Check if connection still works
+        ansible.builtin.ping:
 
-    - name: Check if AllowUsers is set
-      ansible.builtin.lineinfile:
-        path: /etc/ssh/sshd_config
-        line: AllowUsers root
-      check_mode: true
-      register: openssh_check_if_allowusers_is_set
-      failed_when:
-        - openssh_check_if_allowusers_is_set is changed
+      - name: Check if AllowUsers is set
+        ansible.builtin.lineinfile:
+          path: /etc/ssh/sshd_config
+          line: AllowUsers root
+        check_mode: true
+        register: openssh_check_if_allowusers_is_set
+        failed_when:
+          - openssh_check_if_allowusers_is_set is changed
 
-    - name: Check if AllowGroups is set
-      ansible.builtin.lineinfile:
-        path: /etc/ssh/sshd_config
-        line: AllowGroups root
-      check_mode: true
-      register: openssh_check_if_allowgroups_is_set
-      failed_when:
-        - openssh_check_if_allowgroups_is_set is changed
+      - name: Check if AllowGroups is set
+        ansible.builtin.lineinfile:
+          path: /etc/ssh/sshd_config
+          line: AllowGroups root
+        check_mode: true
+        register: openssh_check_if_allowgroups_is_set
+        failed_when:
+          - openssh_check_if_allowgroups_is_set is changed
