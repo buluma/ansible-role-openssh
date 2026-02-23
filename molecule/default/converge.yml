@@ -1,12 +1,12 @@
 ---
-  - name: Converge
-    hosts: all
-    become: true
-    gather_facts: true
+- name: Converge
+  hosts: all
+  become: true
+  gather_facts: true
 
-    roles:
-      - role: buluma.openssh
-        openssh_allow_users:
-          - root
-        openssh_allow_groups:
-          - root
+  roles:
+  - role: buluma.openssh
+    openssh_allow_users:
+    - root
+    openssh_allow_groups:
+    - root
