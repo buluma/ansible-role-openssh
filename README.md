@@ -55,13 +55,13 @@ openssh_port: 22
 openssh_address_family: any
 
 openssh_listen_addresses:
-- "0.0.0.0"
-- "::"
+  - "0.0.0.0"
+  - "::"
 
 openssh_host_keys:
-- /etc/ssh/ssh_host_rsa_key
-- /etc/ssh/ssh_host_ecdsa_key
-- /etc/ssh/ssh_host_ed25519_key
+  - /etc/ssh/ssh_host_rsa_key
+  - /etc/ssh/ssh_host_ecdsa_key
+  - /etc/ssh/ssh_host_ed25519_key
 
 openssh_rekey_limit: default none
 
@@ -127,22 +127,22 @@ openssh_version_addendum: none
 openssh_banner: none
 
 openssh_accept_envs:
-- LANG
-- LANGUAGE
-- LC_ADDRESS
-- LC_ALL
-- LC_COLLATE
-- LC_CTYPE
-- LC_IDENTIFICATION
-- LC_MEASUREMENT
-- LC_MESSAGES
-- LC_MONETARY
-- LC_NAME
-- LC_NUMERIC
-- LC_PAPER
-- LC_TELEPHONE
-- LC_TIME
-- XMODIFIERS
+  - LANG
+  - LANGUAGE
+  - LC_ADDRESS
+  - LC_ALL
+  - LC_COLLATE
+  - LC_CTYPE
+  - LC_IDENTIFICATION
+  - LC_MEASUREMENT
+  - LC_MESSAGES
+  - LC_MONETARY
+  - LC_NAME
+  - LC_NUMERIC
+  - LC_PAPER
+  - LC_TELEPHONE
+  - LC_TIME
+  - XMODIFIERS
 
 openssh_subsystem: sftp {{ openssh_sftp_server }}
 
