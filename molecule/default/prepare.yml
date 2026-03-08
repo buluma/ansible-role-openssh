@@ -5,5 +5,5 @@
   gather_facts: false
 
   roles:
-  - role: buluma.bootstrap
-  - role: buluma.selinux
+    - role: buluma.bootstrap
+    - role: buluma.selinux
