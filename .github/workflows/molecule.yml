@@ -10,12 +10,16 @@ on:
     branches:
       - master
       - main
+      - codex
+      - testing
   pull_request:
     branches:
       - master
       - main
+      - codex
+      - testing
   schedule:
-    - cron: "29 15 15 * *"
+    - cron: '29 15 15 * *'
 
   workflow_dispatch:
 
@@ -40,25 +44,23 @@ jobs:
       fail-fast: false
       matrix:
         distro:
-          - image: "docker-molecule-images"
-            tag: "alpine-openrc_latest"
-          - image: "docker-molecule-images"
-            tag: "amazonlinux2023"
+          - image: "alpine"
+            tag: "latest"
+          - image: "amazonlinux"
+            tag: "latest"
           - image: "enterpriselinux"
             tag: "latest"
-          - image: "docker-molecule-images"
-            tag: "debian_latest"
-          - image: "docker-molecule-images"
+          - image: "debian"
+            tag: "latest"
+          - image: "debian"
             tag: "bookworm"
-          - image: "docker-molecule-images"
-            tag: "fedora_latest"
-          - image: "docker-molecule-images"
-            tag: "fedora45"
-          - image: "docker-molecule-images"
-            tag: "opensuse-tumbleweed"
-          - image: "docker-molecule-images"
-            tag: "ubuntu_latest"
-          - image: "docker-molecule-images"
+          - image: "debian"
+            tag: "bullseye"
+          - image: "fedora"
+            tag: "latest"
+          - image: "ubuntu"
+            tag: "latest"
+          - image: "ubuntu"
             tag: "jammy"
     steps:
       - name: checkout
