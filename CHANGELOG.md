@@ -8,6 +8,11 @@
 
 - Update action [\#18](https://github.com/buluma/ansible-role-openssh/issues/18)
 
+**Merged pull requests:**
+
+- Bump actions/checkout from 4 to 6 [\#21](https://github.com/buluma/ansible-role-openssh/pull/21) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump buluma/molecule-action from 5.0.1 to 5.0.4 [\#8](https://github.com/buluma/ansible-role-openssh/pull/8) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [24.7.28](https://github.com/buluma/ansible-role-openssh/tree/24.7.28) (2024-07-28)
 
 [Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/24.3.31...24.7.28)
