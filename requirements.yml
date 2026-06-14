@@ -2,6 +2,6 @@
 roles:
   - name: buluma.bootstrap
   - name: buluma.selinux
-collections: []
+collections:
   - name: ansible.posix
   - name: community.general
