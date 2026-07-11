@@ -4,6 +4,13 @@
   become: true
   gather_facts: false
 
+  pre_tasks:
+    - name: Install sudo if missing
+      ansible.builtin.raw: "{{ ansible_pkg_mgr | default('dnf') }} install -y sudo"
+      become: false
+      changed_when: false
+      failed_when: false
+
   roles:
     - role: buluma.bootstrap
     - role: buluma.selinux
