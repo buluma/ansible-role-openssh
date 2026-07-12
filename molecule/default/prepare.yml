@@ -11,6 +11,15 @@
       changed_when: false
       failed_when: false
 
+    - name: Configure passwordless sudo
+      ansible.builtin.lineinfile:
+        path: /etc/sudoers
+        state: present
+        regexp: '^%wheel'
+        line: '%wheel ALL=(ALL) NOPASSWD: ALL'
+        validate: 'visudo -cf %s'
+      become: true
+
   roles:
     - role: buluma.bootstrap
     - role: buluma.selinux
