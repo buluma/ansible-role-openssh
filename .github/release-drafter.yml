@@ -1,6 +1,10 @@
 ---
-name-template: "v$NEXT_MINOR_VERSION"
-tag-template: "v$NEXT_MINOR_VERSION"
+# No "v" prefix: this role's tag history (26.6.0, 24.7.28, 24.3.31, ...)
+# predates ansible-generator switching the template to "v$NEXT_MINOR_VERSION".
+# Mixing "vX.Y.Z" and "X.Y.Z" tags breaks ansible-galaxy's version comparator
+# for anyone depending on this role via an unpinned requirements.yml entry.
+name-template: "$NEXT_MINOR_VERSION"
+tag-template: "$NEXT_MINOR_VERSION"
 categories:
   - title: "🚀 Features"
     labels:
