@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-openssh/tree/HEAD)
+## [26.7.0](https://github.com/buluma/ansible-role-openssh/tree/26.7.0) (2026-07-24)
 
-[Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/26.6.0...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-openssh/compare/26.6.0...26.7.0)
 
 **Closed issues:**
 
